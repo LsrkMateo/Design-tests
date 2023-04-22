@@ -1,13 +1,18 @@
-import Image from "next/image";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
-
+import Modal from "../components/Modal";
+import Navegacion from '../components/Navegacion'
 export default function Home() {
   return (
     <main>
-      <button className="btn btn-primary">Boton primario</button>
-      <button className="btn btn-accent btn-outline">Boton tersario</button>
+      <div className="navegacion" id="navbar">
+        <Navegacion/>
+      </div>
+
+      <div className="div-principal">
+        <Modal />
+        <button className="btn btn-primary">Esto no hace nada</button>
+        <button className="btn btn-accent btn-outline">Esto tampoco</button>
+      </div>
+
     </main>
   );
 }
